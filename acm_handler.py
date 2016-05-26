@@ -11,7 +11,7 @@ import cfn_resource
 log = logging.getLogger()
 log.setLevel(logging.DEBUG)
 
-acm = boto3.client('acm')
+acm = boto3.client('acm', region_name='us-east-1')
 
 def await_validation(domain, context):
     # as long as we have at least 10 seconds left
